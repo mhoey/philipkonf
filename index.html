@@ -3,7 +3,7 @@
 
 <head>
   <meta charset="utf-8" />
-  <title>Swiper demo</title>
+  <title>Indbydelse til Philips konfirmation</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1" />
   <!-- Link Swiper's CSS -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
@@ -59,10 +59,9 @@
     <div class="swiper-wrapper">
       <div class="swiper-slide">
         <div class="slide1w" style="background-color: rgb(255, 255, 255);">
-            <span>Hello Philip</span>
-            <button id="s1d">
-                Down
-            </button>
+            <picture style="height:100%">
+              <img src="images/DSCF8977.jpg"/>
+            </picture>
         </div>
       </div>
       <div class="swiper-slide">Slide 2</div>
@@ -91,7 +90,6 @@
       mousewheel: true,
       on: {
         slideChange: () => {
-            alert(swiper.activeIndex)
         }
       }
     });
