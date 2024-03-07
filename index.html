@@ -74,7 +74,7 @@
       height: 100vh;
       display: grid;
       grid-template-columns: 5% 90% 5%;
-      grid-template-rows: 5% 40% 30% 25%;
+      grid-template-rows: 5% 30% 35% 30%;
       z-index: 1;
     }
 
@@ -259,17 +259,22 @@
             </div>
             <div class="s1nav">
               <button class="swibtn firasans">
-                  <div class="swi1">
-                    <svg width="100%" height="100%" viewBox="0 0 400 400" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" xmlns:serif="http://www.serif.com/" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linejoin:round;stroke-miterlimit:2;">
-                      <path d="M200,30c93.826,0 170,76.174 170,170c0,93.826 -76.174,170 -170,170c-93.826,0 -170,-76.174 -170,-170c-0,-93.826 76.174,-170 170,-170Zm-0,30c-77.268,-0 -140,62.732 -140,140c0,77.268 62.732,140 140,140c77.268,-0 140,-62.732 140,-140c0,-77.268 -62.732,-140 -140,-140Z" style="fill:#ebebeb;"/>
-                      <path d="M300,150l0,37.05l-100,-25l-100,25l0,-37.05l100,-25l100,25Z" style="fill:#ebebeb;"/>
-                      <path d="M300,225l0,37.05l-100,-25l-100,25l0,-37.05l100,-25l100,25Z" style="fill:#ebebeb;"/>
-                  </svg>                </div>
-                  <div>
-                    Swipe eller tryk her for mere...
-                  </div>
+                <div class="swi1">
+                  <svg width="100%" height="100%" viewBox="0 0 400 400" version="1.1" xmlns="http://www.w3.org/2000/svg"
+                    xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" xmlns:serif="http://www.serif.com/"
+                    style="fill-rule:evenodd;clip-rule:evenodd;stroke-linejoin:round;stroke-miterlimit:2;">
+                    <path
+                      d="M200,30c93.826,0 170,76.174 170,170c0,93.826 -76.174,170 -170,170c-93.826,0 -170,-76.174 -170,-170c-0,-93.826 76.174,-170 170,-170Zm-0,30c-77.268,-0 -140,62.732 -140,140c0,77.268 62.732,140 140,140c77.268,-0 140,-62.732 140,-140c0,-77.268 -62.732,-140 -140,-140Z"
+                      style="fill:#ebebeb;" />
+                    <path d="M300,150l0,37.05l-100,-25l-100,25l0,-37.05l100,-25l100,25Z" style="fill:#ebebeb;" />
+                    <path d="M300,225l0,37.05l-100,-25l-100,25l0,-37.05l100,-25l100,25Z" style="fill:#ebebeb;" />
+                  </svg>
+                </div>
+                <div>
+                  Swipe eller tryk her for mere...
+                </div>
               </button>
-            </div> 
+            </div>
           </div>
         </div>
         <div class="s1bgi">
@@ -279,41 +284,40 @@
           </picture>
         </div>
       </div>
+      <div class="swiper-slide">Slide 2</div>
+      <div class="swiper-slide">Slide 3</div>
+      <div class="swiper-slide">Slide 4</div>
+      <div class="swiper-slide">Slide 5</div>
+      <div class="swiper-slide">Slide 6</div>
+      <div class="swiper-slide">Slide 7</div>
+      <div class="swiper-slide">Slide 8</div>
+      <div class="swiper-slide">Slide 9</div>
+      <div class="swiper-pagination"></div>
     </div>
-    <div class="swiper-slide">Slide 2</div>
-    <div class="swiper-slide">Slide 3</div>
-    <div class="swiper-slide">Slide 4</div>
-    <div class="swiper-slide">Slide 5</div>
-    <div class="swiper-slide">Slide 6</div>
-    <div class="swiper-slide">Slide 7</div>
-    <div class="swiper-slide">Slide 8</div>
-    <div class="swiper-slide">Slide 9</div>
-    <div class="swiper-pagination"></div>
-  </div>
 
 
 
-  <!-- Swiper JS -->
-  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 
-  <!-- Initialize Swiper -->
-  <script>
-    var swiper = new Swiper(".mySwiper", {
-      direction: "vertical",
-      pagination: {
-        el: ".swiper-pagination",
-        clickable: true,
-      },
-      mousewheel: true,
-      on: {
-        slideChange: () => {
+    <!-- Initialize Swiper -->
+    <script>
+      var swiper = new Swiper(".mySwiper", {
+        direction: "vertical",
+        pagination: {
+          el: ".swiper-pagination",
+          clickable: true,
+        },
+        mousewheel: true,
+        on: {
+          slideChange: () => {
+          }
         }
-      }
-    });
-    // document.getElementById("s1d").addEventListener("click", (event) => {
-    //   swiper.slideTo(1)
-    // })
-  </script>
+      });
+      // document.getElementById("s1d").addEventListener("click", (event) => {
+      //   swiper.slideTo(1)
+      // })
+    </script>
 </body>
 
 </html>
