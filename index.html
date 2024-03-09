@@ -60,13 +60,38 @@
       height: 100%;
     }
 
-    .s1bgi {
+    .s1bgi, .s4bgi {
       top: 0;
       width: 100%;
       height: 100%;
       position: absolute;
       z-index: 0;
     }
+
+    @keyframes slidein {
+      from {
+        top: 100vh
+      }
+
+      to {
+        top: 0
+      }
+    }
+
+    .s3bgi {
+      top: 100vh;
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      z-index: 0;
+    }
+
+    .s3anim {
+      animation-name: slidein;
+      animation-fill-mode: forwards;
+      animation-duration: 3s;
+    }
+
 
     .s1co {
       position: absolute;
@@ -77,6 +102,17 @@
       grid-template-rows: 5% 30% 30% 25%;
       z-index: 1;
     }
+
+    .s4co {
+      position: absolute;
+      width: 100vw;
+      height: 100vh;
+      display: grid;
+      grid-template-columns: 5% 90% 5%;
+      grid-template-rows: 5% 45% 45% 5%;
+      z-index: 1;
+    }
+
 
     .s1t1 {
       grid-row: 2;
@@ -96,6 +132,32 @@
       background-color: rgba(255, 255, 255, 0.131);
       margin: 24px;
       border-radius: 10px;
+    }
+
+    .s2p1 {
+      grid-row: 1;
+      grid-column: 2;
+      align-self: start;
+      color: white;
+      font-size: 1.2em;
+      background-color: rgba(111, 111, 111, 0.493);
+      margin: 24px;
+      border-radius: 10px;
+    }
+
+    .s4p1 {
+      grid-row: 1;
+      grid-column: 2;
+      align-self: start;
+      color: white;
+      font-size: 1.2em;
+      background-color: rgba(111, 111, 111, 0.493);
+      margin: 24px;
+      border-radius: 10px;
+    }
+
+    .s2p1 a {
+      font-weight: 800;
     }
 
     .s1d1 {
@@ -129,6 +191,24 @@
       font-size: 1em;
       align-items: center;
       justify-content: center;
+    }
+
+    .swibtn1 {
+      display: flex;
+      flex-direction: row;
+      background-color: rgba(26, 20, 20, 0.283);
+      border: 1px solid white;
+      padding: 20px;
+      border-radius: 8px;
+      color: white;
+      font-size: 1em;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .s4i1 {
+      grid-row: 3;
+      grid-column: 2;
     }
   </style>
 </head>
@@ -258,7 +338,7 @@
               </p>
             </div>
             <div class="s1nav">
-              <button class="swibtn firasans">
+              <button id="s1b1" class="swibtn firasans">
                 <div class="swi1">
                   <svg width="100%" height="100%" viewBox="0 0 400 400" version="1.1" xmlns="http://www.w3.org/2000/svg"
                     xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" xmlns:serif="http://www.serif.com/"
@@ -284,14 +364,118 @@
           </picture>
         </div>
       </div>
-      <div class="swiper-slide">Slide 2</div>
-      <div class="swiper-slide">Slide 3</div>
-      <div class="swiper-slide">Slide 4</div>
-      <div class="swiper-slide">Slide 5</div>
-      <div class="swiper-slide">Slide 6</div>
-      <div class="swiper-slide">Slide 7</div>
-      <div class="swiper-slide">Slide 8</div>
-      <div class="swiper-slide">Slide 9</div>
+      <div class="swiper-slide">
+        <div class="slide1w">
+          <div class="s1co">
+            <div class="s2p1">
+              <p class="firasans">
+                Konfirmationen finder sted kl. 11.00 i Viby Kirke. Vi har
+                kun 15 pladser. Så vi tænker at det kun bliver
+                den nærmeste famile der kan komme med. I er selvfølgelig
+                velkomne til at komme forbi og sige tillykke.
+              </p>
+            </div>
+            <div class="s1nav">
+              <button id="s2b1" class="swibtn1 firasans">
+                <div class="swi1">
+                  <svg width="100%" height="100%" viewBox="0 0 400 400" version="1.1" xmlns="http://www.w3.org/2000/svg"
+                    xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" xmlns:serif="http://www.serif.com/"
+                    style="fill-rule:evenodd;clip-rule:evenodd;stroke-linejoin:round;stroke-miterlimit:2;">
+                    <path
+                      d="M200,30c93.826,0 170,76.174 170,170c0,93.826 -76.174,170 -170,170c-93.826,0 -170,-76.174 -170,-170c-0,-93.826 76.174,-170 170,-170Zm-0,30c-77.268,-0 -140,62.732 -140,140c0,77.268 62.732,140 140,140c77.268,-0 140,-62.732 140,-140c0,-77.268 -62.732,-140 -140,-140Z"
+                      style="fill:#ebebeb;" />
+                    <path d="M300,150l0,37.05l-100,-25l-100,25l0,-37.05l100,-25l100,25Z" style="fill:#ebebeb;" />
+                    <path d="M300,225l0,37.05l-100,-25l-100,25l0,-37.05l100,-25l100,25Z" style="fill:#ebebeb;" />
+                  </svg>
+                </div>
+                <div>
+                  Swipe eller tryk her for mere...
+                </div>
+              </button>
+            </div>
+          </div>
+          <div class="s1bgi">
+            <picture style="width:100%">
+              <source srcset="images/kirke.jpg" media="(orientation:portrait)" />
+              <img src="images/kirke-landscape.jpg" />
+            </picture>
+          </div>
+        </div>
+      </div>
+      <div class="swiper-slide">
+        <div class="slide1w">
+          <div class="s1co">
+            <div class="s2p1">
+              <p class="firasans">
+                Festen bliver Danmarks
+                højeste konfirmation, for vi skal være på
+                toppen af Ligthhouse hos restuarant Bavn.
+                Glæd jeg til en helt unik udsigt og oplevelse.
+                <br />
+                Mødetid kl. 13.00 - senest 13.30 (husk sæt tid
+                af til at finde parkering, se nærmere på de næste
+                sider)
+                <br />
+                Før festen har I mulighed for at opleve Aarhus
+                Øje's museum, da vores gæster har gratis adgang
+                til det interaktive museum i kælderen, så kom i
+                god tid og få det med. <a href="https://aarhusoeje.dk/udstillingen/">Aarhus Øje - Byen og bugten</a>
+              </p>
+            </div>
+            <div class="s1nav">
+              <button id="s2b1" class="swibtn1 firasans">
+                <div class="swi1">
+                  <svg width="100%" height="100%" viewBox="0 0 400 400" version="1.1" xmlns="http://www.w3.org/2000/svg"
+                    xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" xmlns:serif="http://www.serif.com/"
+                    style="fill-rule:evenodd;clip-rule:evenodd;stroke-linejoin:round;stroke-miterlimit:2;">
+                    <path
+                      d="M200,30c93.826,0 170,76.174 170,170c0,93.826 -76.174,170 -170,170c-93.826,0 -170,-76.174 -170,-170c-0,-93.826 76.174,-170 170,-170Zm-0,30c-77.268,-0 -140,62.732 -140,140c0,77.268 62.732,140 140,140c77.268,-0 140,-62.732 140,-140c0,-77.268 -62.732,-140 -140,-140Z"
+                      style="fill:#ebebeb;" />
+                    <path d="M300,150l0,37.05l-100,-25l-100,25l0,-37.05l100,-25l100,25Z" style="fill:#ebebeb;" />
+                    <path d="M300,225l0,37.05l-100,-25l-100,25l0,-37.05l100,-25l100,25Z" style="fill:#ebebeb;" />
+                  </svg>
+                </div>
+                <div>
+                  Swipe eller tryk her for mere...
+                </div>
+              </button>
+            </div>
+          </div>
+          <div id="s3bgi" class="s3bgi">
+            <picture style="width:100%">
+              <source srcset="images/lhouse.jpg" media="(orientation:portrait)" />
+              <img src="images/lhouse-landscape.jpg" />
+            </picture>
+          </div>
+        </div>
+        <p>
+        </p>
+      </div>
+      <div class="swiper-slide">
+        <div class="slide1w">
+          <div class="s4co">
+            <div class="s4p1">
+              <p class="firasans">
+                Parkering:<br/>
+                Det meste parkering på Aarhus Ø er under jorden. Der er gæste parkeringer under Ligthhouse. Det er en ret anonym nedkørsel! (Se kort). 
+                Hvis alle gæste plader er fyldt ved Ligthhouse, så prøv parkeringskælderen under et af de nærliggende byggerier. HUSK! Have parkerings APP parat
+                og check at alt er ok med registrering af parkering. (Det er rigtig dyrt at klumre!)
+              </p>
+            </div>
+            <div class="s4i1">
+              <picture>
+                <img src="images/parkering.jpg">
+              </picture>
+            </div>
+          </div>
+          <div class="s4bgi">
+            <picture style="width:100%">
+              <source srcset="images/lhouse.jpg" media="(orientation:portrait)" />
+              <img src="images/lhouse-landscape.jpg" />
+            </picture>
+          </div>  
+        </div>
+      </div>
       <div class="swiper-pagination"></div>
     </div>
 
@@ -310,13 +494,18 @@
         },
         mousewheel: true,
         on: {
-          slideChange: () => {
+          slideChange: (swipeprops) => {
+            console.log(swipeprops.activeIndex)
+            if (swipeprops.activeIndex == 2) {
+              let el = document.getElementById("s3bgi")
+              el.className = "s3bgi s3anim"
+            }
           }
         }
       });
-      // document.getElementById("s1d").addEventListener("click", (event) => {
-      //   swiper.slideTo(1)
-      // })
+      document.getElementById("s1b1").addEventListener("click", (event) => {
+        swiper.slideTo(1)
+      })
     </script>
 </body>
 
