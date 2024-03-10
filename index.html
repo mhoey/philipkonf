@@ -109,7 +109,7 @@
       height: 100vh;
       display: grid;
       grid-template-columns: 5% 90% 5%;
-      grid-template-rows: 5% 45% 45% 5%;
+      grid-template-rows: 5% 50% 40% 5%;
       z-index: 1;
     }
 
@@ -409,21 +409,23 @@
               <p class="firasans">
                 Festen bliver Danmarks
                 højeste konfirmation, for vi skal være på
-                toppen af Ligthhouse hos restuarant Bavn.
-                Glæd jeg til en helt unik udsigt og oplevelse.
+                toppen af Lighthouse hos restuarant Bavn.
+                <span style="font-weight:600">Glæd jer til en helt unik udsigt og oplevelse!</span>
                 <br />
-                Mødetid kl. 13.00 - senest 13.30 (husk sæt tid
-                af til at finde parkering, se nærmere på de næste
-                sider)
+                Mødetid kl. 13.00, og maden serveres kl. 13.30 (husk sæt god tid
+                af til at finde parkering, se nærmere på den næste
+                side)
                 <br />
                 Før festen har I mulighed for at opleve Aarhus
                 Øje's museum, da vores gæster har gratis adgang
                 til det interaktive museum i kælderen, så kom i
                 god tid og få det med. <a href="https://aarhusoeje.dk/udstillingen/">Aarhus Øje - Byen og bugten</a>
+                <br>
+                Ring endelig på: 30 48 58 09, hvis I har spørgsmål.
               </p>
             </div>
             <div class="s1nav">
-              <button id="s2b1" class="swibtn1 firasans">
+              <button id="s3b1" class="swibtn1 firasans">
                 <div class="swi1">
                   <svg width="100%" height="100%" viewBox="0 0 400 400" version="1.1" xmlns="http://www.w3.org/2000/svg"
                     xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" xmlns:serif="http://www.serif.com/"
@@ -456,9 +458,9 @@
           <div class="s4co">
             <div class="s4p1">
               <p class="firasans">
-                Parkering:<br/>
-                Det meste parkering på Aarhus Ø er under jorden. Der er gæste parkeringer under Ligthhouse. Det er en ret anonym nedkørsel! (Se kort). 
-                Hvis alle gæste plader er fyldt ved Ligthhouse, så prøv parkeringskælderen under et af de nærliggende byggerier. HUSK! Have parkerings APP parat
+                <span style="font-weight: 600;">Parkering:</span><br/>
+                Det meste parkering på Aarhus Ø er under jorden. Der er gæste parkeringer under Lighthouse. Det er en ret anonym nedkørsel! (Se kort). 
+                Hvis alle gæstepladser er fyldt ved Lighthouse, så prøv parkeringskælderen under et af de nærliggende byggerier. HUSK! Have parkerings APP parat
                 og check at alt er ok med registrering af parkering. (Det er rigtig dyrt at klumre!)
               </p>
             </div>
@@ -505,6 +507,12 @@
       });
       document.getElementById("s1b1").addEventListener("click", (event) => {
         swiper.slideTo(1)
+      })
+      document.getElementById("s2b1").addEventListener("click", (event) => {
+        swiper.slideTo(2)
+      })
+      document.getElementById("s3b1").addEventListener("click", (event) => {
+        swiper.slideTo(3)
       })
     </script>
 </body>
